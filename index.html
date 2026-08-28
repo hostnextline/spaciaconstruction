@@ -310,16 +310,6 @@ html.lang-en .en{display:revert}
 }
 .carte p{font-size:14px; line-height:1.6; color:var(--beton)}
 
-/* ---------- Réalisations ---------- */
-.bloc-real{margin-top:calc(var(--u)*7)}
-.bloc-real .etiquette{display:block; margin-bottom:calc(var(--u)*2)}
-.realisations{display:flex; flex-wrap:wrap; gap:calc(var(--u)*1.5)}
-.realisations li{
-  font-family:var(--mono); font-size:12.5px; letter-spacing:.02em;
-  border:1px solid var(--trait); padding:calc(var(--u)*1.5) calc(var(--u)*2.5);
-  background:var(--papier);
-}
-.section-2 .realisations li{background:var(--papier-2)}
 
 /* ============================================================
    Zone parallaxe — trois profondeurs
@@ -435,6 +425,58 @@ html.lang-en .en{display:revert}
   margin-top:calc(var(--u)*3); font-family:var(--mono); font-size:10.5px;
   letter-spacing:.08em; color:#8A9089; display:flex; flex-wrap:wrap;
   gap:calc(var(--u)*1) calc(var(--u)*3);
+}
+
+
+/* ============================================================
+   Portfolio des realisations
+   ============================================================ */
+.pf{display:grid; gap:1px; background:var(--trait); border:1px solid var(--trait); grid-template-columns:1fr}
+@media(min-width:640px){ .pf{grid-template-columns:1fr 1fr} }
+@media(min-width:1000px){ .pf{grid-template-columns:repeat(3,1fr)} }
+.pf-item{background:var(--papier); display:flex; flex-direction:column}
+.section-2 .pf-item{background:var(--papier-2)}
+.pf-vue{position:relative; overflow:hidden; aspect-ratio:3/2; background:var(--papier-2)}
+.pf-vue img{
+  width:100%; height:100%; object-fit:cover; display:block;
+  transition:transform .55s cubic-bezier(.22,.61,.36,1);
+}
+.pf-item:hover .pf-vue img,.pf-item:focus-within .pf-vue img{transform:scale(1.045)}
+.pf-txt{padding:calc(var(--u)*2.5) calc(var(--u)*3) calc(var(--u)*3.5)}
+.pf-txt .etiquette{display:block; margin-bottom:calc(var(--u)*1.25); color:var(--bleu)}
+.pf-txt h3{font-size:17px; font-weight:600; letter-spacing:-.025em; line-height:1.25}
+.pf-plus{
+  margin-top:calc(var(--u)*5); padding-top:calc(var(--u)*4);
+  border-top:1px solid var(--trait);
+}
+.pf-plus .etiquette{display:block; margin-bottom:calc(var(--u)*2)}
+.pf-noms{
+  display:flex; flex-wrap:wrap; gap:calc(var(--u)*1) calc(var(--u)*3);
+  font-family:var(--mono); font-size:12px; letter-spacing:.02em;
+  color:var(--beton); line-height:1.9; max-width:96ch;
+}
+
+/* ============================================================
+   Equipe — un tableau, comme le cartouche d'un plan
+   ============================================================ */
+.eq{border-top:1px solid var(--trait)}
+.eq-grp{
+  display:grid; grid-template-columns:1fr; gap:calc(var(--u)*2);
+  padding:calc(var(--u)*4) 0; border-bottom:1px solid var(--trait);
+}
+@media(min-width:820px){
+  .eq-grp{grid-template-columns:200px 1fr; gap:0 calc(var(--u)*5); padding:calc(var(--u)*4.5) 0}
+}
+.eq-grp > .etiquette{padding-top:4px; color:var(--bleu)}
+.eq-liste{display:grid; grid-template-columns:1fr; gap:calc(var(--u)*2)}
+@media(min-width:560px){ .eq-liste{grid-template-columns:1fr 1fr; gap:calc(var(--u)*2.5) calc(var(--u)*4)} }
+@media(min-width:1000px){ .eq-liste{grid-template-columns:repeat(3,1fr)} }
+.eq-p .nom{
+  display:block; font-size:17px; font-weight:600; letter-spacing:-.022em; line-height:1.3;
+}
+.eq-p .role{
+  display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.05em;
+  color:var(--beton); line-height:1.5; margin-top:3px;
 }
 
 /* ============================================================
@@ -611,9 +653,71 @@ html.lang-en .en{display:revert}
 </section>
 
 <!-- ============================================================
+     L'equipe
+     ============================================================ -->
+<section class="section section-2" id="equipe">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">L’équipe</span><span class="en" lang="en">The team</span></span>
+      <h2 class="titre">
+        <span class="fr">Onze personnes, sous le même toit.</span>
+        <span class="en" lang="en">Eleven people, under the same roof.</span>
+      </h2>
+      <p class="chapo">
+        <span class="fr">L’estimation, la conception et la surintendance de chantier sont assurées à l’interne. C’est ce qui permet de n’avoir qu’un seul interlocuteur du premier chiffrage jusqu’à la mise en service.</span>
+        <span class="en" lang="en">Estimating, design and site superintendence are handled in-house. That is what makes a single point of contact possible, from first pricing through to commissioning.</span>
+      </p>
+    </div>
+
+    <div class="eq reveler">
+      <div class="eq-grp">
+        <span class="etiquette"><span class="fr">Direction</span><span class="en" lang="en">Leadership</span></span>
+        <div class="eq-liste">
+          <div class="eq-p"><span class="nom">Nicholas</span><span class="role"><span class="fr">Directeur de projets / Président</span><span class="en" lang="en">Project Director / President</span></span></div>
+        </div>
+      </div>
+
+      <div class="eq-grp">
+        <span class="etiquette"><span class="fr">Estimation</span><span class="en" lang="en">Estimating</span></span>
+        <div class="eq-liste">
+          <div class="eq-p"><span class="nom">Carlos V.</span><span class="role"><span class="fr">Directeur estimation</span><span class="en" lang="en">Estimating Director</span></span></div>
+          <div class="eq-p"><span class="nom">Angelica</span><span class="role"><span class="fr">Coordonnatrice estimation</span><span class="en" lang="en">Estimating Coordinator</span></span></div>
+          <div class="eq-p"><span class="nom">Nicolas Z.</span><span class="role"><span class="fr">Coordinateur estimation</span><span class="en" lang="en">Estimating Coordinator</span></span></div>
+        </div>
+      </div>
+
+      <div class="eq-grp">
+        <span class="etiquette"><span class="fr">Conception</span><span class="en" lang="en">Design</span></span>
+        <div class="eq-liste">
+          <div class="eq-p"><span class="nom">Carolina</span><span class="role"><span class="fr">Coordonnatrice conception</span><span class="en" lang="en">Design Coordinator</span></span></div>
+        </div>
+      </div>
+
+      <div class="eq-grp">
+        <span class="etiquette"><span class="fr">Chantier</span><span class="en" lang="en">Site</span></span>
+        <div class="eq-liste">
+          <div class="eq-p"><span class="nom">Jean-Sébastien</span><span class="role"><span class="fr">Surintendant</span><span class="en" lang="en">Superintendent</span></span></div>
+          <div class="eq-p"><span class="nom">Sherley</span><span class="role"><span class="fr">Chef d’équipe – PSI</span><span class="en" lang="en">Team Lead – PSI</span></span></div>
+          <div class="eq-p"><span class="nom">Christian</span><span class="role"><span class="fr">Poseur de systèmes intérieurs</span><span class="en" lang="en">Interior Systems Installer</span></span></div>
+          <div class="eq-p"><span class="nom">Steve R.</span><span class="role"><span class="fr">Livreur / Charpentier-menuisier</span><span class="en" lang="en">Driver / Carpenter-Joiner</span></span></div>
+        </div>
+      </div>
+
+      <div class="eq-grp">
+        <span class="etiquette"><span class="fr">Développement et administration</span><span class="en" lang="en">Business and administration</span></span>
+        <div class="eq-liste">
+          <div class="eq-p"><span class="nom">Liseth</span><span class="role"><span class="fr">Chef d’équipe / Ventes marketing</span><span class="en" lang="en">Team Lead / Sales and Marketing</span></span></div>
+          <div class="eq-p"><span class="nom">Roxanne</span><span class="role"><span class="fr">Consultante en comptabilité</span><span class="en" lang="en">Accounting Consultant</span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      La méthode — cinq étapes
      ============================================================ -->
-<section class="section section-2" id="methode">
+<section class="section" id="methode">
   <div class="enveloppe">
     <div class="entete reveler">
       <span class="etiquette"><span class="fr">La méthode</span><span class="en" lang="en">The method</span></span>
@@ -660,7 +764,7 @@ html.lang-en .en{display:revert}
 <!-- ============================================================
      Ce que nous construisons
      ============================================================ -->
-<section class="section">
+<section class="section section-2">
   <div class="enveloppe">
     <div class="entete reveler">
       <span class="etiquette"><span class="fr">Les projets</span><span class="en" lang="en">Projects</span></span>
@@ -702,14 +806,137 @@ html.lang-en .en{display:revert}
         <p><span class="fr">Systèmes intérieurs et projets clé en main, de la préconstruction à la mise en service.</span><span class="en" lang="en">Interior systems and turnkey projects, from preconstruction to commissioning.</span></p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="bloc-real reveler">
-      <span class="etiquette"><span class="fr">Réalisations</span><span class="en" lang="en">Selected projects</span></span>
-      <ul class="realisations">
+<!-- ============================================================
+     Portfolio des realisations
+     ============================================================ -->
+<section class="section" id="realisations">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">Réalisations</span><span class="en" lang="en">Selected work</span></span>
+      <h2 class="titre">
+        <span class="fr">Des espaces livrés, pas des rendus.</span>
+        <span class="en" lang="en">Delivered spaces, not renderings.</span>
+      </h2>
+      <p class="chapo">
+        <span class="fr">Bureaux, cliniques, commerces et immeubles commerciaux menés de la conception à la mise en service.</span>
+        <span class="en" lang="en">Offices, clinics, retail and commercial buildings taken from design through to commissioning.</span>
+      </p>
+    </div>
+
+    <div class="pf reveler">
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/90beaubien.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Hall d’entrée du 90 Beaubien Ouest : plafond à lattes de bois, graphisme mural « 909 » et terrazzo au sol.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Immeuble commercial, Montréal</span><span class="en" lang="en">Commercial building, Montréal</span></span>
+          <h3>90 Beaubien Ouest</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/gsoft.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Aire commune des bureaux GSoft avec comptoir bar, structure apparente et plancher de bois clair.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Bureaux</span><span class="en" lang="en">Offices</span></span>
+          <h3>GSoft</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/carebook.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Plateau de bureaux ouvert de Carebook, végétalisé, avec assises basses et postes de travail.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Bureaux</span><span class="en" lang="en">Offices</span></span>
+          <h3>Carebook</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/logient.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Salle de travail de Logient : longue table blanche, suspensions noires et mur d’ardoise.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Bureaux</span><span class="en" lang="en">Offices</span></span>
+          <h3>Logient</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/dentaire-les-cours.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Réception du Centre Dentaire Les Cours encadrée de deux grands aquariums récifaux.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Clinique dentaire</span><span class="en" lang="en">Dental clinic</span></span>
+          <h3>Centre Dentaire Les Cours</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/clinique-auditive.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Comptoir de réception de la Clinique Auditive DG, signalétique gravée et plancher de bois gris.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Clinique</span><span class="en" lang="en">Clinic</span></span>
+          <h3>Clinique Auditive DG</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/quilicot.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Plancher de vente de Bicycles Quilicot : vélos exposés sur socles de bois, éclairage sur rails.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Commerce de détail</span><span class="en" lang="en">Retail</span></span>
+          <h3>Bicycles Quilicot</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/bilboquet.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Comptoir vitré de la pâtisserie Bilboquet sous un tableau de menu à la craie.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Commerce de détail</span><span class="en" lang="en">Retail</span></span>
+          <h3>Bilboquet</h3>
+        </figcaption>
+      </figure>
+      <figure class="pf-item">
+        <div class="pf-vue">
+          <img src="assets/projets/club-atwater.jpg" width="900" height="600" loading="lazy" decoding="async"
+               alt="Grande salle du Club Atwater : plancher de bois, tables longues et chaises velours colorées.">
+        </div>
+        <figcaption class="pf-txt">
+          <span class="etiquette"><span class="fr">Club sportif</span><span class="en" lang="en">Sports club</span></span>
+          <h3>Club Atwater</h3>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="pf-plus reveler">
+      <span class="etiquette"><span class="fr">Aussi livrés</span><span class="en" lang="en">Also delivered</span></span>
+      <ul class="pf-noms">
         <li>Fédération des médecins résidents du Québec</li>
-        <li>Carebook</li>
         <li>Proprio Direct</li>
         <li>F.I.T. Ventures</li>
+        <li>Aveva</li>
+        <li>Aesus</li>
+        <li>Emeres</li>
+        <li>TOHU</li>
+        <li>Cabana Séguin</li>
+        <li>Englobe Canada</li>
+        <li>Collège de l’Immobilier du Québec</li>
+        <li>Corbeil Électroménagers</li>
+        <li>Nord Sud Honda</li>
+        <li>AQCPE</li>
+        <li>Marché du Store</li>
+        <li>Polar Bear’s Club</li>
       </ul>
     </div>
   </div>
