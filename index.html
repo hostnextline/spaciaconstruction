@@ -1,0 +1,1140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SPACIA Construction — Entrepreneur général commercial, Mirabel</title>
+<meta name="description" content="SPACIA est un entrepreneur général spécialisé en conception-construction commerciale : aménagement de bureaux, cliniques médicales, commerces et projets clé en main. Un seul interlocuteur, de la conception à la livraison. Mirabel, Montréal et le Grand Montréal.">
+<link rel="canonical" href="https://hostnextline.github.io/spaciaconstruction/">
+<meta name="theme-color" content="#16181A">
+<meta name="format-detection" content="telephone=yes">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SPACIA Construction">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:locale:alternate" content="en_CA">
+<meta property="og:url" content="https://hostnextline.github.io/spaciaconstruction/">
+<meta property="og:title" content="SPACIA Construction — Entrepreneur général commercial">
+<meta property="og:description" content="Conception, gestion de projet et construction sous un même toit. Un seul interlocuteur, de la conception à la livraison.">
+<meta property="og:image" content="https://hostnextline.github.io/spaciaconstruction/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SPACIA Construction — entrepreneur général commercial, Mirabel, Québec">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/touch.png">
+
+<link rel="preload" as="font" type="font/woff2" href="assets/polices/archivo-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/polices/plexmono-500-latin.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high">
+
+<style>
+/* ============================================================
+   SPACIA — polices auto-hébergées, sous-ensemble latin.
+   Aucune requête tierce : rien ne bloque le premier rendu.
+   ============================================================ */
+@font-face{
+  font-family:'Archivo';
+  src:url(assets/polices/archivo-latin.woff2) format('woff2');
+  font-weight:400 700; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Plex Mono';
+  src:url(assets/polices/plexmono-400-latin.woff2) format('woff2');
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:'Plex Mono';
+  src:url(assets/polices/plexmono-500-latin.woff2) format('woff2');
+  font-weight:500; font-style:normal; font-display:swap;
+}
+
+/* ---------- Jetons ---------- */
+:root{
+  --papier:#E9EAE7;      /* gypse, plaque de plâtre — minéral, jamais crème */
+  --papier-2:#DFE0DC;    /* béton poncé */
+  --encre:#16181A;       /* graphite, acier noir des cadres */
+  --beton:#565A55;       /* texte secondaire, contraste 5,7:1 */
+  --trait:#C7C9C4;       /* filet d'un pixel */
+  --bleu:#29505F;        /* bleu de tirage — cotes et focus uniquement */
+  --sur-sombre:#9CA29B;
+  --trait-sombre:#33383A;
+
+  --u:8px;
+  --page:1280px;
+  --dis:'Archivo',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--papier); color:var(--encre);
+  font-family:var(--dis); font-weight:400;
+  font-size:clamp(15px,.55vw + 13.2px,17px); line-height:1.6;
+  letter-spacing:-.008em;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+img,svg,video{display:block; max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,figure,blockquote,ul{margin:0}
+ul{list-style:none; padding:0}
+
+/* ---------- Bilingue : la seconde langue est masquée dès la feuille
+     de style, donc aucun clignotement ni décalage au chargement ---------- */
+.en{display:none}
+html.lang-en .fr{display:none}
+html.lang-en .en{display:revert}
+
+/* ---------- Accessibilité ---------- */
+:focus-visible{outline:2px solid var(--bleu); outline-offset:3px; border-radius:1px}
+.sombre :focus-visible,.zone-para :focus-visible,.pied :focus-visible,.hero :focus-visible{outline-color:#8FB8C7}
+.saut{
+  position:absolute; left:-9999px; top:0; padding:12px 20px; z-index:100;
+  background:var(--encre); color:var(--papier); font:500 12px/1 var(--mono);
+  letter-spacing:.1em; text-transform:uppercase; text-decoration:none;
+}
+.saut:focus{left:8px; top:8px}
+
+/* ---------- Trame ---------- */
+.enveloppe{width:100%; max-width:var(--page); margin:0 auto; padding:0 calc(var(--u)*3)}
+@media(min-width:900px){ .enveloppe{padding:0 calc(var(--u)*7)} }
+
+.etiquette{
+  font-family:var(--mono); font-weight:500; font-size:11px; line-height:1;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--beton);
+}
+.sombre .etiquette{color:var(--sur-sombre)}
+
+.titre{
+  font-weight:600; letter-spacing:-.035em; line-height:1.02;
+  font-size:clamp(30px,5.2vw,58px); text-wrap:balance;
+}
+.chapo{
+  font-size:clamp(17px,1.5vw,21px); line-height:1.5;
+  letter-spacing:-.015em; color:var(--beton); max-width:62ch;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh; display:flex; align-items:flex-end;
+  overflow:hidden; background:var(--encre); isolation:isolate;
+}
+.hero-media{position:absolute; inset:-8% 0 -8% 0; z-index:0; will-change:transform}
+.hero-media img,.hero-media video{
+  width:100%; height:100%; object-fit:cover; object-position:50% 45%;
+}
+.hero-media video{
+  position:absolute; inset:0; opacity:0;
+  transition:opacity .9s ease;
+}
+.hero-media video.visible{opacity:1}
+.hero-media img.efface{opacity:0; transition:opacity .9s ease}
+/* Voile : garantit le contraste du texte quel que soit le cadrage */
+.hero::after{
+  content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:
+    linear-gradient(100deg,rgba(10,12,13,.90) 0%,rgba(10,12,13,.72) 34%,rgba(10,12,13,.18) 66%,rgba(10,12,13,.30) 100%),
+    linear-gradient(to top,rgba(10,12,13,.72) 0%,rgba(10,12,13,0) 42%);
+}
+/* Attention : cet élément porte aussi la classe .enveloppe. Le raccourci
+   `padding` écrase donc son padding latéral — il faut le redonner ici,
+   sinon le texte du hero touche le bord de l'écran en mobile. */
+.hero-contenu{
+  position:relative; z-index:3; width:100%; color:var(--papier);
+  padding:calc(var(--u)*16) calc(var(--u)*3) calc(var(--u)*7);
+  will-change:transform;
+}
+@media(min-width:900px){
+  .hero-contenu{padding:calc(var(--u)*20) calc(var(--u)*7) calc(var(--u)*9)}
+}
+
+.hero .etiquette{color:#B9BFB8}
+.hero-eyebrow{display:flex; flex-wrap:wrap; gap:0 calc(var(--u)*2); margin-bottom:calc(var(--u)*4)}
+.hero-eyebrow span+span::before{content:'·'; margin-right:calc(var(--u)*2); color:#6E7570}
+
+.hero h1{
+  font-weight:600; letter-spacing:-.042em; line-height:.99;
+  font-size:clamp(36px,7.1vw,86px); max-width:15ch; text-wrap:balance;
+  margin-bottom:calc(var(--u)*3);
+}
+.hero-chapo{
+  font-size:clamp(16px,1.35vw,19px); line-height:1.55; letter-spacing:-.012em;
+  color:#C6CBC5; max-width:52ch; margin-bottom:calc(var(--u)*5);
+}
+
+/* ---------- Le moment signature : la cote d'architecte ----------
+   Deux lignes d'attache tombent, la ligne de cote se trace entre
+   elles, puis le titre se pose dans l'espace ainsi mesuré.      */
+.cote{margin-bottom:calc(var(--u)*3); max-width:430px}
+.cote svg{width:100%; height:auto; overflow:visible}
+.cote .attache{
+  stroke:#8FB8C7; stroke-width:1; transform-origin:center top;
+  transform:scaleY(0); animation:attache .5s cubic-bezier(.22,.61,.36,1) .25s forwards;
+}
+.cote .attache.b{animation-delay:.35s}
+.cote .ligne{
+  stroke:#8FB8C7; stroke-width:1;
+  stroke-dasharray:440; stroke-dashoffset:440;
+  animation:tracer .75s cubic-bezier(.22,.61,.36,1) .6s forwards;
+}
+.cote .fleche{fill:#8FB8C7; opacity:0; animation:parait .3s ease 1.15s forwards}
+.cote-txt{
+  display:block; margin-top:calc(var(--u)*1.5); opacity:0;
+  animation:parait .6s ease 1.3s forwards; color:#8FB8C7 !important;
+}
+@keyframes attache{to{transform:scaleY(1)}}
+@keyframes tracer{to{stroke-dashoffset:0}}
+@keyframes parait{to{opacity:1}}
+
+.hero .chute{opacity:0; transform:translateY(14px); animation:chute .8s cubic-bezier(.22,.61,.36,1) forwards}
+.hero h1.chute{animation-delay:1.45s}
+.hero .hero-chapo.chute{animation-delay:1.6s}
+.hero .hero-actions.chute{animation-delay:1.72s}
+.hero-eyebrow.chute{animation-delay:.1s}
+@keyframes chute{to{opacity:1; transform:none}}
+
+.hero-actions{display:flex; flex-wrap:wrap; gap:calc(var(--u)*2) calc(var(--u)*3); align-items:center}
+
+/* ---------- L'action unique ---------- */
+.appel{
+  display:inline-flex; align-items:baseline; gap:calc(var(--u)*1.5);
+  background:var(--papier); color:var(--encre); text-decoration:none;
+  padding:calc(var(--u)*2.25) calc(var(--u)*3.5);
+  font-family:var(--mono); font-weight:500; font-size:16px; letter-spacing:.01em;
+  border:1px solid var(--papier); white-space:nowrap;
+  transition:background .22s ease,color .22s ease,transform .22s ease;
+}
+.appel .pre{font-size:10px; letter-spacing:.16em; text-transform:uppercase; opacity:.62}
+.appel:hover{background:transparent; color:var(--papier); transform:translateY(-2px)}
+.appel:active{transform:none}
+
+.lien-2{
+  font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+  text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:3px;
+  color:#C6CBC5; transition:color .2s ease;
+}
+.lien-2:hover{color:var(--papier)}
+
+/* ---------- Bascule de langue ---------- */
+.langue{
+  position:fixed; top:calc(var(--u)*2); right:calc(var(--u)*2); z-index:40;
+  display:flex; gap:1px; background:rgba(22,24,26,.34);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  border:1px solid rgba(233,234,231,.22); padding:1px;
+}
+.langue button{
+  font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.1em;
+  padding:7px 11px; border:0; background:transparent; color:#D6DAD5; cursor:pointer;
+  transition:background .18s ease,color .18s ease;
+}
+.langue button[aria-pressed="true"]{background:var(--papier); color:var(--encre)}
+@media(min-width:900px){ .langue{top:calc(var(--u)*3); right:calc(var(--u)*3)} }
+
+/* ============================================================
+   Bandeau de preuve
+   ============================================================ */
+.preuve{border-bottom:1px solid var(--trait); background:var(--papier)}
+.preuve ul{display:grid; grid-template-columns:1fr 1fr; gap:0}
+@media(min-width:820px){ .preuve ul{grid-template-columns:repeat(4,1fr)} }
+.preuve li{
+  padding:calc(var(--u)*4) calc(var(--u)*3) calc(var(--u)*4) 0;
+  border-top:1px solid var(--trait);
+}
+.preuve li+li{padding-left:calc(var(--u)*3); border-left:1px solid var(--trait)}
+@media(min-width:820px){ .preuve li{padding-top:calc(var(--u)*5); padding-bottom:calc(var(--u)*5)} }
+.preuve .val{
+  display:block; font-size:clamp(20px,2.1vw,27px); font-weight:600;
+  letter-spacing:-.03em; line-height:1.1; margin-bottom:calc(var(--u)*1);
+}
+.preuve .note{color:var(--bleu)}
+.preuve .sur{font-size:.62em; color:var(--beton)}
+.preuve .det{font-size:13px; line-height:1.45; color:var(--beton)}
+
+/* ============================================================
+   Sections
+   ============================================================ */
+.section{padding:calc(var(--u)*11) 0}
+@media(min-width:900px){ .section{padding:calc(var(--u)*16) 0} }
+.section-2{background:var(--papier-2)}
+.sombre{background:var(--encre); color:var(--papier)}
+.sombre .chapo{color:var(--sur-sombre)}
+.sombre .titre{color:var(--papier)}
+
+.entete{margin-bottom:calc(var(--u)*7)}
+.entete .etiquette{display:block; margin-bottom:calc(var(--u)*2.5)}
+.entete .titre{margin-bottom:calc(var(--u)*3)}
+@media(min-width:900px){ .entete{margin-bottom:calc(var(--u)*9)} }
+
+/* ---------- La méthode : table de faits sur filets fins ---------- */
+.methode{border-top:1px solid var(--trait)}
+.etape{
+  display:grid; grid-template-columns:auto 1fr; gap:0 calc(var(--u)*3);
+  padding:calc(var(--u)*4) 0; border-bottom:1px solid var(--trait);
+  align-items:start;
+}
+@media(min-width:900px){
+  .etape{grid-template-columns:64px 4.2fr 6fr; gap:0 calc(var(--u)*5); padding:calc(var(--u)*5) 0}
+}
+.etape .num{
+  font-family:var(--mono); font-weight:500; font-size:12px; letter-spacing:.1em;
+  color:var(--bleu); padding-top:5px;
+}
+.etape h3{
+  font-size:clamp(18px,1.75vw,23px); font-weight:600; letter-spacing:-.028em;
+  line-height:1.2; margin-bottom:calc(var(--u)*1.5);
+}
+@media(min-width:900px){ .etape h3{margin-bottom:0; padding-right:calc(var(--u)*3)} }
+.etape p{color:var(--beton); font-size:15px; line-height:1.62; grid-column:2/-1}
+@media(min-width:900px){ .etape p{grid-column:3/-1} }
+
+/* ---------- Cartes ---------- */
+.grille{
+  display:grid; gap:1px; background:var(--trait);
+  border:1px solid var(--trait); grid-template-columns:1fr;
+}
+@media(min-width:640px){ .grille{grid-template-columns:1fr 1fr} }
+@media(min-width:1000px){ .grille{grid-template-columns:repeat(3,1fr)} }
+.carte{background:var(--papier); padding:calc(var(--u)*4); transition:background .25s ease}
+.section-2 .carte{background:var(--papier-2)}
+.carte:hover{background:#F1F2EF}
+.section-2 .carte:hover{background:#E8E9E5}
+.carte .etiquette{display:block; margin-bottom:calc(var(--u)*2); color:var(--bleu)}
+.carte h3{
+  font-size:18px; font-weight:600; letter-spacing:-.025em; line-height:1.25;
+  margin-bottom:calc(var(--u)*1.5);
+}
+.carte p{font-size:14px; line-height:1.6; color:var(--beton)}
+
+/* ---------- Réalisations ---------- */
+.bloc-real{margin-top:calc(var(--u)*7)}
+.bloc-real .etiquette{display:block; margin-bottom:calc(var(--u)*2)}
+.realisations{display:flex; flex-wrap:wrap; gap:calc(var(--u)*1.5)}
+.realisations li{
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.02em;
+  border:1px solid var(--trait); padding:calc(var(--u)*1.5) calc(var(--u)*2.5);
+  background:var(--papier);
+}
+.section-2 .realisations li{background:var(--papier-2)}
+
+/* ============================================================
+   Zone parallaxe — trois profondeurs
+   ============================================================ */
+.zone-para{
+  position:relative; overflow:hidden; background:var(--encre);
+  min-height:min(78vh,620px); display:flex; align-items:center;
+  padding:calc(var(--u)*12) 0;
+}
+.para-fond{position:absolute; inset:-14% 0; z-index:0; will-change:transform}
+.para-fond img{width:100%; height:100%; object-fit:cover; opacity:.42; filter:contrast(1.06)}
+.zone-para::after{
+  content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(90deg,rgba(15,17,18,.86) 0%,rgba(15,17,18,.55) 55%,rgba(15,17,18,.72) 100%);
+}
+.para-milieu{position:relative; z-index:2; will-change:transform}
+.para-avant{position:relative; z-index:3; will-change:transform; margin-top:calc(var(--u)*4)}
+.zone-para .titre{color:var(--papier); max-width:17ch}
+.zone-para .etiquette{color:#8FB8C7; display:block; margin-bottom:calc(var(--u)*2.5)}
+.territoire{
+  display:flex; flex-wrap:wrap; gap:calc(var(--u)*1) calc(var(--u)*2.5);
+  max-width:760px; font-family:var(--mono); font-size:12px; letter-spacing:.02em;
+  color:var(--sur-sombre); line-height:1.9;
+}
+
+/* ============================================================
+   Avis
+   ============================================================ */
+.avis-grille{
+  display:grid; gap:1px; background:var(--trait-sombre);
+  border-top:1px solid var(--trait-sombre); border-bottom:1px solid var(--trait-sombre);
+  grid-template-columns:1fr; margin-bottom:calc(var(--u)*5);
+}
+@media(min-width:900px){ .avis-grille{grid-template-columns:repeat(3,1fr)} }
+.avis{background:var(--encre); padding:calc(var(--u)*5) calc(var(--u)*4)}
+@media(min-width:900px){ .avis{padding:calc(var(--u)*6) calc(var(--u)*4.5)} }
+.etoiles{
+  font-family:var(--mono); font-size:12px; letter-spacing:.24em; color:#C8A24B;
+  margin-bottom:calc(var(--u)*3); display:block;
+}
+.avis blockquote{
+  font-size:clamp(16px,1.35vw,18.5px); line-height:1.55; letter-spacing:-.018em;
+  margin-bottom:calc(var(--u)*3.5); color:var(--papier);
+}
+.avis figcaption{font-family:var(--mono); font-size:11.5px; line-height:1.7; color:var(--sur-sombre)}
+.avis figcaption strong{
+  display:block; color:var(--papier); font-weight:500;
+  letter-spacing:.06em; text-transform:uppercase; font-size:11px; margin-bottom:4px;
+}
+.avis-source{font-family:var(--mono); font-size:11px; line-height:1.7; letter-spacing:.04em; color:var(--sur-sombre); max-width:80ch}
+
+/* ============================================================
+   Coordonnées
+   ============================================================ */
+.coord{
+  display:grid; gap:calc(var(--u)*6); grid-template-columns:1fr;
+  border-top:1px solid var(--trait); padding-top:calc(var(--u)*6);
+}
+@media(min-width:820px){ .coord{grid-template-columns:1.15fr 1fr 1fr; gap:calc(var(--u)*7)} }
+.coord h3{
+  font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--beton); margin-bottom:calc(var(--u)*2.5);
+}
+.coord address{font-style:normal; font-size:16px; line-height:1.65}
+.coord a{text-decoration:none; border-bottom:1px solid var(--trait); transition:border-color .2s ease}
+.coord a:hover{border-color:var(--encre)}
+.coord .note-2{margin-top:calc(var(--u)*3); font-size:14.5px; line-height:1.55; color:var(--beton)}
+.coord .rbq{margin-top:calc(var(--u)*3); font-family:var(--mono); font-size:11.5px; letter-spacing:.06em; color:var(--beton)}
+.heures{width:100%; border-collapse:collapse; font-size:14.5px}
+.heures th{text-align:left; font-weight:400; color:var(--beton); padding:6px 0}
+.heures td{text-align:right; font-family:var(--mono); font-size:13px; padding:6px 0; font-variant-numeric:tabular-nums}
+.heures tr.ferme th,.heures tr.ferme td{opacity:.66}
+.heures tr+tr th,.heures tr+tr td{border-top:1px solid var(--trait)}
+
+/* ============================================================
+   Pied de page — composé, pas déversé
+   ============================================================ */
+.pied{background:var(--encre); color:var(--papier); padding:calc(var(--u)*10) 0 calc(var(--u)*5)}
+@media(min-width:900px){ .pied{padding:calc(var(--u)*14) 0 calc(var(--u)*6)} }
+.pied-haut{
+  display:grid; gap:calc(var(--u)*5); grid-template-columns:1fr;
+  padding-bottom:calc(var(--u)*7); border-bottom:1px solid var(--trait-sombre);
+  align-items:end;
+}
+@media(min-width:820px){ .pied-haut{grid-template-columns:1.4fr auto; gap:calc(var(--u)*8)} }
+.pied-haut .titre{font-size:clamp(26px,3.6vw,42px); max-width:18ch; color:var(--papier)}
+.pied .appel{background:var(--papier); color:var(--encre); border-color:var(--papier)}
+.pied .appel:hover{background:transparent; color:var(--papier)}
+.pied-bas{display:grid; gap:calc(var(--u)*4); grid-template-columns:1fr; padding-top:calc(var(--u)*6)}
+@media(min-width:820px){ .pied-bas{grid-template-columns:1.6fr 1fr 1fr; gap:calc(var(--u)*6)} }
+.pied h4{
+  font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--sur-sombre); margin:0 0 calc(var(--u)*2.5);
+}
+.pied a{color:var(--papier); text-decoration:none}
+.pied-bas li{font-size:14px; line-height:1.9; color:var(--sur-sombre)}
+.pied-bas li a{color:var(--sur-sombre); border-bottom:1px solid transparent; transition:color .2s ease,border-color .2s ease}
+.pied-bas li a:hover{color:var(--papier); border-color:var(--trait-sombre)}
+.reseaux{display:flex; gap:calc(var(--u)*1.5); margin-top:calc(var(--u)*3)}
+.reseaux a{
+  width:38px; height:38px; display:grid; place-items:center;
+  border:1px solid var(--trait-sombre); transition:border-color .2s ease,background .2s ease;
+}
+.reseaux a:hover{border-color:var(--sur-sombre); background:rgba(233,234,231,.06)}
+.reseaux svg{width:15px; height:15px; fill:var(--sur-sombre); transition:fill .2s ease}
+.reseaux a:hover svg{fill:var(--papier)}
+.mention{
+  margin-top:calc(var(--u)*7); padding-top:calc(var(--u)*4);
+  border-top:1px solid var(--trait-sombre);
+  font-size:12px; line-height:1.7; color:#787E79; max-width:82ch;
+}
+.credit{
+  margin-top:calc(var(--u)*3); font-family:var(--mono); font-size:10.5px;
+  letter-spacing:.08em; color:#5E645F; display:flex; flex-wrap:wrap;
+  gap:calc(var(--u)*1) calc(var(--u)*3);
+}
+
+/* ============================================================
+   Révélation au défilement
+   ============================================================ */
+.reveler{opacity:0; transform:translateY(18px); transition:opacity .75s ease,transform .75s cubic-bezier(.22,.61,.36,1)}
+.reveler.vu{opacity:1; transform:none}
+
+/* PIÈGE N°2 — parade 3 : impression et export PDF headless */
+@media print{
+  .reveler,.chute,.cote-txt,.cote .fleche{opacity:1 !important; transform:none !important; animation:none !important}
+  .cote .attache{transform:scaleY(1) !important; animation:none !important}
+  .cote .ligne{stroke-dashoffset:0 !important; animation:none !important}
+  .langue,.hero-media{display:none !important}
+  /* Le hero est en 100svh à l'écran : à l'impression, cette hauteur figée
+     rognait le titre et le bouton d'appel. On laisse le contenu s'écouler. */
+  .hero{min-height:auto !important; display:block !important}
+  .hero-contenu{padding:24px 0 !important; opacity:1 !important; transform:none !important}
+  .hero::after{background:none !important}
+  .hero,.sombre,.zone-para,.pied{background:#fff !important; color:#000 !important}
+  .hero .titre,.sombre .titre,.zone-para .titre,.pied-haut .titre,
+  .avis blockquote,.hero h1,.hero-chapo{color:#000 !important}
+}
+
+/* ============================================================
+   Mouvement réduit — respecté entièrement
+   ============================================================ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.001ms !important; animation-iteration-count:1 !important;
+    transition-duration:.001ms !important; scroll-behavior:auto !important;
+  }
+  .reveler,.chute,.cote-txt,.cote .fleche{opacity:1 !important; transform:none !important}
+  .cote .attache{transform:scaleY(1) !important}
+  .cote .ligne{stroke-dashoffset:0 !important}
+  .hero-media,.hero-contenu,.para-fond,.para-milieu,.para-avant{transform:none !important; will-change:auto !important}
+}
+</style>
+<noscript><style>
+  .reveler{opacity:1 !important; transform:none !important}
+  .chute,.cote-txt,.cote .fleche{opacity:1 !important; transform:none !important; animation:none !important}
+  .cote .attache{transform:scaleY(1) !important; animation:none !important}
+  .cote .ligne{stroke-dashoffset:0 !important; animation:none !important}
+  .langue{display:none !important}
+</style></noscript>
+</head>
+<body>
+
+<a class="saut" href="#contenu"><span class="fr">Aller au contenu</span><span class="en" lang="en">Skip to content</span></a>
+
+<div class="langue" role="group" aria-label="Langue / Language">
+  <button type="button" data-l="fr" aria-pressed="true">FR</button>
+  <button type="button" data-l="en" aria-pressed="false">EN</button>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero">
+  <div class="hero-media" data-hero="0.16">
+    <img src="assets/hero-poster.jpg" width="1920" height="1080" id="poster" fetchpriority="high"
+         alt="Intérieur commercial fraîchement livré : plafond à lattes de chêne, cloisons vitrées à cadres d’acier noir et plancher de béton poli traversé par la lumière du matin.">
+    <video id="fond" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
+           poster="assets/hero-poster.jpg" data-src="assets/hero.mp4"
+           width="1920" height="1080"></video>
+  </div>
+
+  <div class="hero-contenu enveloppe" data-hero="0.52">
+    <div class="hero-eyebrow etiquette chute">
+      <span><span class="fr">Entrepreneur général</span><span class="en" lang="en">General contractor</span></span>
+      <span>Mirabel, QC</span>
+      <span>RBQ 5674-9203-01</span>
+    </div>
+
+    <!-- Moment signature : on cote l'espace avant d'y bâtir -->
+    <div class="cote" aria-hidden="true">
+      <svg viewBox="0 0 430 26" fill="none" role="presentation">
+        <line class="attache a" x1="1" y1="0" x2="1" y2="26"/>
+        <line class="attache b" x1="429" y1="0" x2="429" y2="26"/>
+        <line class="ligne" x1="1" y1="13" x2="429" y2="13"/>
+        <polygon class="fleche" points="1,13 13,8.5 13,17.5"/>
+        <polygon class="fleche" points="429,13 417,8.5 417,17.5"/>
+      </svg>
+      <span class="etiquette cote-txt">
+        <span class="fr">Conception — Livraison</span><span class="en" lang="en">Design — Delivery</span>
+      </span>
+    </div>
+
+    <h1 class="chute">
+      <span class="fr">Un seul interlocuteur, de la conception à la livraison.</span>
+      <span class="en" lang="en">One point of contact, from design to delivery.</span>
+    </h1>
+
+    <p class="hero-chapo chute">
+      <span class="fr">SPACIA est un entrepreneur général spécialisé en construction commerciale : aménagement de bureaux, cliniques médicales, commerces de détail et projets clé en main.</span>
+      <span class="en" lang="en">SPACIA is a general contractor specializing in commercial construction: office fit-outs, medical clinics, retail spaces and turnkey projects.</span>
+    </p>
+
+    <div class="hero-actions chute">
+      <a class="appel" href="tel:+14506250715">
+        <span class="pre"><span class="fr">Parlons-en</span><span class="en" lang="en">Let’s talk</span></span>
+        450&nbsp;625-0715
+      </a>
+      <a class="lien-2" href="#methode">
+        <span class="fr">Notre méthode</span><span class="en" lang="en">Our method</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- ============================================================
+     Bandeau de preuve
+     ============================================================ -->
+<section class="preuve" aria-label="En bref">
+  <div class="enveloppe">
+    <ul>
+      <li>
+        <span class="val note">4,1<span class="sur">/5</span></span>
+        <span class="det"><span class="fr">20 avis Google</span><span class="en" lang="en">20 Google reviews</span></span>
+      </li>
+      <li>
+        <span class="val">5674-9203-01</span>
+        <span class="det"><span class="fr">Licence RBQ</span><span class="en" lang="en">RBQ licence</span></span>
+      </li>
+      <li>
+        <span class="val"><span class="fr">Budget garanti</span><span class="en" lang="en">Budget guaranteed</span></span>
+        <span class="det"><span class="fr">Par écrit, avant le début des travaux</span><span class="en" lang="en">In writing, before work begins</span></span>
+      </li>
+      <li>
+        <span class="val">11</span>
+        <span class="det"><span class="fr">Personnes à l’interne : estimation, conception, surintendance</span><span class="en" lang="en">In-house: estimating, design, superintendence</span></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     L'entreprise
+     ============================================================ -->
+<section class="section">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">L’entreprise</span><span class="en" lang="en">The firm</span></span>
+      <h2 class="titre">
+        <span class="fr">Conception, gestion de projet et construction sous un même toit.</span>
+        <span class="en" lang="en">Design, project management and construction under one roof.</span>
+      </h2>
+      <p class="chapo">
+        <span class="fr">SPACIA agit comme gestionnaire de projet et coordonne l’ensemble des intervenants afin d’offrir une approche clé en main, de la conception à la livraison. Son expertise s’adresse exclusivement à une clientèle commerciale : entreprises, propriétaires, développeurs et investisseurs.</span>
+        <span class="en" lang="en">SPACIA acts as project manager and coordinates every party involved to deliver a turnkey approach, from design through to handover. Its expertise serves a commercial clientele exclusively: businesses, owners, developers and investors.</span>
+      </p>
+    </div>
+
+    <div class="grille reveler">
+      <div class="carte">
+        <span class="etiquette">01</span>
+        <h3><span class="fr">Un seul interlocuteur</span><span class="en" lang="en">One point of contact</span></h3>
+        <p><span class="fr">La préconstruction, la conception, la gestion de projet et la construction sont réunies sous un même toit. Une seule personne répond du projet.</span><span class="en" lang="en">Preconstruction, design, project management and construction sit under one roof. One person answers for the project.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">02</span>
+        <h3><span class="fr">Budget garanti par écrit</span><span class="en" lang="en">Budget guaranteed in writing</span></h3>
+        <p><span class="fr">L’estimation budgétaire est intégrée dès la phase de conception, ce qui réduit les ajustements coûteux en cours de chantier et améliore la prévisibilité du projet.</span><span class="en" lang="en">Budget estimating is built into the design phase, which reduces costly mid-site adjustments and improves predictability.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">03</span>
+        <h3><span class="fr">Suivi en temps réel</span><span class="en" lang="en">Real-time tracking</span></h3>
+        <p><span class="fr">L’avancement des travaux, les échéanciers et la qualité font l’objet d’un suivi rigoureux et d’une communication transparente.</span><span class="en" lang="en">Progress, schedule and quality are tracked rigorously, with transparent communication throughout.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     La méthode — cinq étapes
+     ============================================================ -->
+<section class="section section-2" id="methode">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">La méthode</span><span class="en" lang="en">The method</span></span>
+      <h2 class="titre">
+        <span class="fr">Conception-construction, en cinq étapes.</span>
+        <span class="en" lang="en">Design-build, in five steps.</span>
+      </h2>
+      <p class="chapo">
+        <span class="fr">L’approche Design-Build réunit la conception et l’exécution sous une seule responsabilité — ce qui améliore le contrôle des coûts et des échéanciers, et réduit les risques d’erreurs.</span>
+        <span class="en" lang="en">The design-build approach places design and execution under a single responsibility — improving cost and schedule control, and reducing the risk of errors.</span>
+      </p>
+    </div>
+
+    <div class="methode reveler">
+      <div class="etape">
+        <span class="num">01</span>
+        <h3><span class="fr">Analyse et planification stratégique</span><span class="en" lang="en">Analysis and strategic planning</span></h3>
+        <p><span class="fr">Les besoins opérationnels de l’entreprise, les contraintes du site, les exigences réglementaires et les objectifs budgétaires sont évalués en profondeur afin d’établir une base solide pour le projet.</span><span class="en" lang="en">Operational needs, site constraints, regulatory requirements and budget objectives are assessed in depth to establish a solid basis for the project.</span></p>
+      </div>
+      <div class="etape">
+        <span class="num">02</span>
+        <h3><span class="fr">Conception et coordination architecturale</span><span class="en" lang="en">Design and architectural coordination</span></h3>
+        <p><span class="fr">La conception architecturale est développée avec des architectes partenaires membres de l’OAQ, puis intégrée au design d’intérieur et à la planification technique afin d’assurer une exécution cohérente et maîtrisée.</span><span class="en" lang="en">Architectural design is developed with partner architects who are members of the OAQ, then integrated with interior design and technical planning to ensure coherent, controlled execution.</span></p>
+      </div>
+      <div class="etape">
+        <span class="num">03</span>
+        <h3><span class="fr">Estimation et optimisation budgétaire</span><span class="en" lang="en">Estimating and budget optimization</span></h3>
+        <p><span class="fr">Les coûts sont validés avec précision, les matériaux sélectionnés stratégiquement et les travaux planifiés de façon structurée pour garantir un budget maîtrisé.</span><span class="en" lang="en">Costs are validated precisely, materials selected strategically and the work planned in a structured way to keep the budget under control.</span></p>
+      </div>
+      <div class="etape">
+        <span class="num">04</span>
+        <h3><span class="fr">Construction et coordination complète</span><span class="en" lang="en">Construction and full coordination</span></h3>
+        <p><span class="fr">SPACIA supervise l’ensemble des travaux, coordonne les sous-traitants et veille au respect des normes en vigueur, avec un suivi rigoureux des échéanciers et de la qualité.</span><span class="en" lang="en">SPACIA supervises all work, coordinates subcontractors and ensures applicable standards are met, with rigorous tracking of schedule and quality.</span></p>
+      </div>
+      <div class="etape">
+        <span class="num">05</span>
+        <h3><span class="fr">Livraison et mise en service</span><span class="en" lang="en">Handover and commissioning</span></h3>
+        <p><span class="fr">Une vérification finale est effectuée, les ajustements nécessaires sont apportés et un accompagnement est offert jusqu’à la mise en service complète des espaces commerciaux.</span><span class="en" lang="en">A final inspection is carried out, any adjustments are made, and support continues through to full commissioning of the commercial space.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Ce que nous construisons
+     ============================================================ -->
+<section class="section">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">Les projets</span><span class="en" lang="en">Projects</span></span>
+      <h2 class="titre">
+        <span class="fr">Ce que nous construisons.</span>
+        <span class="en" lang="en">What we build.</span>
+      </h2>
+    </div>
+
+    <div class="grille reveler">
+      <div class="carte">
+        <span class="etiquette">01</span>
+        <h3><span class="fr">Bureaux et sièges sociaux</span><span class="en" lang="en">Offices and headquarters</span></h3>
+        <p><span class="fr">Aménagement de bureaux, aménagement intérieur commercial et design d’intérieur commercial.</span><span class="en" lang="en">Office fit-outs, commercial interior build-outs and commercial interior design.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">02</span>
+        <h3><span class="fr">Cliniques médicales</span><span class="en" lang="en">Medical clinics</span></h3>
+        <p><span class="fr">Construction et aménagement de cliniques médicales et d’espaces de soins.</span><span class="en" lang="en">Construction and fit-out of medical clinics and care spaces.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">03</span>
+        <h3><span class="fr">Commerces de détail</span><span class="en" lang="en">Retail</span></h3>
+        <p><span class="fr">Rénovation commerciale et aménagement de commerces de détail.</span><span class="en" lang="en">Commercial renovation and retail build-outs.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">04</span>
+        <h3><span class="fr">Industriel</span><span class="en" lang="en">Industrial</span></h3>
+        <p><span class="fr">Construction industrielle et agrandissement de bâtiments commerciaux.</span><span class="en" lang="en">Industrial construction and commercial building extensions.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">05</span>
+        <h3><span class="fr">Multilogement et mixte</span><span class="en" lang="en">Multi-unit and mixed-use</span></h3>
+        <p><span class="fr">Construction multilogement et bâtiments à usage mixte.</span><span class="en" lang="en">Multi-unit residential construction and mixed-use buildings.</span></p>
+      </div>
+      <div class="carte">
+        <span class="etiquette">06</span>
+        <h3><span class="fr">Systèmes intérieurs</span><span class="en" lang="en">Interior systems</span></h3>
+        <p><span class="fr">Systèmes intérieurs et projets clé en main, de la préconstruction à la mise en service.</span><span class="en" lang="en">Interior systems and turnkey projects, from preconstruction to commissioning.</span></p>
+      </div>
+    </div>
+
+    <div class="bloc-real reveler">
+      <span class="etiquette"><span class="fr">Réalisations</span><span class="en" lang="en">Selected projects</span></span>
+      <ul class="realisations">
+        <li>Fédération des médecins résidents du Québec</li>
+        <li>Carebook</li>
+        <li>Proprio Direct</li>
+        <li>F.I.T. Ventures</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Zone parallaxe — trois profondeurs
+     ============================================================ -->
+<section class="zone-para" data-para-zone aria-label="Territoire desservi">
+  <div class="para-fond" data-para="-64">
+    <img src="assets/hero-poster.jpg" alt="" aria-hidden="true" loading="lazy" width="1920" height="1080">
+  </div>
+  <div class="enveloppe" style="position:relative;z-index:2">
+    <div class="para-milieu" data-para="26">
+      <span class="etiquette"><span class="fr">Territoire</span><span class="en" lang="en">Service area</span></span>
+      <h2 class="titre">
+        <span class="fr">De Montréal à la Rive-Nord et à la Rive-Sud.</span>
+        <span class="en" lang="en">From Montréal to the North and South Shores.</span>
+      </h2>
+    </div>
+    <div class="para-avant" data-para="58">
+      <ul class="territoire">
+        <li>Montréal</li><li>Westmount</li><li>Pointe-Claire</li><li>Kirkland</li>
+        <li>Laval</li><li>Boisbriand</li><li>Blainville</li><li>Terrebonne</li>
+        <li>Repentigny</li><li>Mascouche</li><li>Mirabel</li><li>Saint-Jérôme</li>
+        <li>Rosemère</li><li>Sainte-Thérèse</li><li>Saint-Eustache</li><li>Longueuil</li>
+        <li>Brossard</li><li>Saint-Lambert</li><li>Boucherville</li><li>Chambly</li>
+        <li>Châteauguay</li><li>Joliette</li><li>Lachute</li><li>Salaberry-de-Valleyfield</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     Avis — verbatim, langue d'origine, source nommée
+     ============================================================ -->
+<section class="section sombre">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">Avis clients</span><span class="en" lang="en">Client reviews</span></span>
+      <h2 class="titre">
+        <span class="fr">Ce que disent les clients.</span>
+        <span class="en" lang="en">What clients say.</span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="avis-grille reveler">
+    <figure class="avis">
+      <span class="etoiles" aria-label="5 étoiles sur 5" role="img">★★★★★</span>
+      <blockquote lang="fr">« Au nom de Locus Développement, nous tenons à souligner l’excellent travail de Spacia Construction pour la réalisation de notre bâtiment industriel. »</blockquote>
+      <figcaption>
+        <strong>Jonathan Vadnais</strong>
+        Locus Développement<br>
+        <span class="fr">Avis Google · il y a un an</span><span class="en" lang="en">Google review · a year ago</span>
+      </figcaption>
+    </figure>
+
+    <figure class="avis">
+      <span class="etoiles" aria-label="5 étoiles sur 5" role="img">★★★★★</span>
+      <blockquote lang="fr">« Excellente consultation du début à la fin ! L’équipe de Spacia nous a offert un soutien professionnel et détaillé pour notre projet. Leur expertise et leur dévouement ont fait toute la différence. »</blockquote>
+      <figcaption>
+        <strong>Santiago Lopez Martinez</strong>
+        <span class="fr">Avis Google · il y a 8 mois</span><span class="en" lang="en">Google review · 8 months ago</span>
+      </figcaption>
+    </figure>
+
+    <figure class="avis">
+      <span class="etoiles" aria-label="5 étoiles sur 5" role="img">★★★★★</span>
+      <blockquote lang="en">“Mine was a small project, but I never felt like I wasn’t important to SPACIA... They also helped me stay on budget and took pains to make sure things went smoothly. I highly recommend them!”</blockquote>
+      <figcaption>
+        <strong>Kathryn Westoll</strong>
+        Executive Director, Geordie Theatre<br>
+        <span class="fr">Avis Google · il y a un an</span><span class="en" lang="en">Google review · a year ago</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="enveloppe">
+    <p class="avis-source reveler">
+      <span class="fr">Avis publiés sur la fiche Google de SPACIA Construction, reproduits mot pour mot et dans leur langue d’origine. Note globale : 4,1 sur 5 pour 20 avis.</span>
+      <span class="en" lang="en">Reviews published on SPACIA Construction’s Google Business Profile, reproduced word for word in their original language. Overall rating: 4.1 out of 5 across 20 reviews.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     Coordonnées
+     ============================================================ -->
+<section class="section" aria-label="Coordonnées">
+  <div class="enveloppe">
+    <div class="entete reveler">
+      <span class="etiquette"><span class="fr">Nous joindre</span><span class="en" lang="en">Get in touch</span></span>
+      <h2 class="titre">
+        <span class="fr">Parlons de votre projet.</span>
+        <span class="en" lang="en">Let’s talk about your project.</span>
+      </h2>
+    </div>
+
+    <div class="coord reveler">
+      <div>
+        <h3><span class="fr">Bureau chef</span><span class="en" lang="en">Head office</span></h3>
+        <address>
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=14163+Boulevard+Cur%C3%A9-Labelle%2C+Mirabel%2C+QC+J7J+1M3" target="_blank" rel="noopener">
+            14163 boulevard Curé-Labelle<br>Mirabel, QC&nbsp;&nbsp;J7J&nbsp;1M3
+          </a>
+        </address>
+        <p class="note-2">
+          <span class="fr">Place d’affaires : 8815 avenue du Parc, suite 402, Montréal, H2N 1Y7</span>
+          <span class="en" lang="en">Business location: 8815 avenue du Parc, suite 402, Montréal, H2N 1Y7</span>
+        </p>
+      </div>
+
+      <div>
+        <h3><span class="fr">Heures d’ouverture</span><span class="en" lang="en">Opening hours</span></h3>
+        <table class="heures">
+          <tbody>
+            <tr>
+              <th scope="row"><span class="fr">Lundi – jeudi</span><span class="en" lang="en">Monday – Thursday</span></th>
+              <td><span class="fr">8 h – 16 h</span><span class="en" lang="en">8 am – 4 pm</span></td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="fr">Vendredi</span><span class="en" lang="en">Friday</span></th>
+              <td><span class="fr">8 h – 12 h</span><span class="en" lang="en">8 am – 12 pm</span></td>
+            </tr>
+            <tr class="ferme">
+              <th scope="row"><span class="fr">Samedi – dimanche</span><span class="en" lang="en">Saturday – Sunday</span></th>
+              <td><span class="fr">Fermé</span><span class="en" lang="en">Closed</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div>
+        <h3><span class="fr">Direct</span><span class="en" lang="en">Direct</span></h3>
+        <address style="line-height:1.9">
+          <a href="tel:+14506250715">450 625-0715</a><br>
+          <a href="mailto:info@spacia.ca">info@spacia.ca</a>
+        </address>
+        <p class="rbq">RBQ 5674-9203-01</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     Pied de page
+     ============================================================ -->
+<footer class="pied">
+  <div class="enveloppe">
+    <div class="pied-haut">
+      <h2 class="titre">
+        <span class="fr">Un projet commercial en préparation ?</span>
+        <span class="en" lang="en">Planning a commercial project?</span>
+      </h2>
+      <a class="appel" href="tel:+14506250715">
+        <span class="pre"><span class="fr">Appeler</span><span class="en" lang="en">Call</span></span>
+        450&nbsp;625-0715
+      </a>
+    </div>
+
+    <div class="pied-bas">
+      <div>
+        <h4>SPACIA Construction inc.</h4>
+        <ul>
+          <li><span class="fr">Entrepreneur général en conception-construction commerciale</span><span class="en" lang="en">General contractor in commercial design-build</span></li>
+          <li>RBQ 5674-9203-01</li>
+          <li><a href="mailto:info@spacia.ca">info@spacia.ca</a></li>
+        </ul>
+        <div class="reseaux">
+          <a href="https://www.facebook.com/spaciaconstruction/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8.5V6.8c0-.8.2-1.3 1.4-1.3H17V2.6c-.3 0-1.2-.1-2.3-.1-2.4 0-4 1.4-4 4.1v1.9H8V12h2.7v9H14v-9h2.6l.4-3.5H14z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/spacia.construction/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 6.9a5.1 5.1 0 100 10.2 5.1 5.1 0 000-10.2zm0 8.4a3.3 3.3 0 110-6.6 3.3 3.3 0 010 6.6zm6.5-8.6a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/spacia-design/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 21H3.4V9.2h3.5V21zM5.1 7.7A2 2 0 115.2 3.6a2 2 0 01-.1 4.1zM21 21h-3.5v-5.7c0-1.4 0-3.1-1.9-3.1s-2.2 1.5-2.2 3v5.8H9.9V9.2h3.3v1.6h.1a3.7 3.7 0 013.3-1.8c3.5 0 4.2 2.3 4.2 5.3V21z"/></svg>
+          </a>
+          <a href="https://fr.pinterest.com/spaciaconstruction/" target="_blank" rel="noopener" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.6 1.3 1.4l-.9 3.5c-.1.6.3 1.1.9 1.1 1.1 0 2-1.2 2-2.9 0-1.5-1.1-2.6-2.6-2.6-1.8 0-2.9 1.3-2.9 2.7 0 .5.2 1.1.4 1.4l.1.2v.3l-.2.9c0 .2-.1.2-.3.1-1-.5-1.6-1.9-1.6-3.1 0-2.5 1.8-4.8 5.3-4.8 2.8 0 4.9 2 4.9 4.6 0 2.8-1.7 5-4.2 5-.8 0-1.6-.4-1.9-.9l-.5 2c-.2.7-.7 1.6-1 2.2A10 10 0 1012 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4><span class="fr">Bureau chef</span><span class="en" lang="en">Head office</span></h4>
+        <ul>
+          <li>
+            <a href="https://www.google.com/maps/dir/?api=1&amp;destination=14163+Boulevard+Cur%C3%A9-Labelle%2C+Mirabel%2C+QC+J7J+1M3" target="_blank" rel="noopener">
+              14163 boul. Curé-Labelle<br>Mirabel, QC J7J 1M3
+            </a>
+          </li>
+          <li><span class="fr">Lun – jeu : 8 h – 16 h</span><span class="en" lang="en">Mon – Thu: 8 am – 4 pm</span></li>
+          <li><span class="fr">Ven : 8 h – 12 h</span><span class="en" lang="en">Fri: 8 am – 12 pm</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4><span class="fr">Territoire</span><span class="en" lang="en">Service area</span></h4>
+        <ul>
+          <li><span class="fr">Montréal et le Grand Montréal</span><span class="en" lang="en">Montréal and Greater Montréal</span></li>
+          <li><span class="fr">Laval et la Rive-Nord</span><span class="en" lang="en">Laval and the North Shore</span></li>
+          <li><span class="fr">Rive-Sud et Montérégie</span><span class="en" lang="en">South Shore and Montérégie</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="mention">
+      <span class="fr">Spacia Construction est un entrepreneur général en conception-construction commerciale. Nous ne sommes pas membres de l’Ordre des architectes du Québec (OAQ) et n’offrons pas de services d’architecture au sens de la Loi sur les architectes. Les services d’architecture requis dans nos projets sont réalisés par des firmes partenaires membres de l’OAQ.</span>
+      <span class="en" lang="en">Spacia Construction is a general contractor in commercial design-build. We are not members of the Ordre des architectes du Québec (OAQ) and do not provide architectural services within the meaning of the Architects Act. Architectural services required on our projects are carried out by partner firms that are OAQ members.</span>
+    </p>
+
+    <p class="credit">
+      <span>© <span id="an">2026</span> SPACIA Construction inc.</span>
+      <span class="fr">Aucun témoin, aucun traceur, aucune donnée personnelle collectée.</span>
+      <span class="en" lang="en">No cookies, no trackers, no personal data collected.</span>
+    </p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"GeneralContractor",
+  "name":"SPACIA Construction inc.",
+  "alternateName":"SPACIA",
+  "url":"https://hostnextline.github.io/spaciaconstruction/",
+  "image":"https://hostnextline.github.io/spaciaconstruction/assets/og.jpg",
+  "telephone":"+1-450-625-0715",
+  "email":"info@spacia.ca",
+  "description":"Entrepreneur général spécialisé en conception-construction commerciale : aménagement de bureaux, cliniques médicales, commerces de détail, projets industriels et clé en main. Un seul interlocuteur, de la conception à la livraison.",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"14163 boulevard Curé-Labelle",
+    "addressLocality":"Mirabel",
+    "addressRegion":"QC",
+    "postalCode":"J7J 1M3",
+    "addressCountry":"CA"
+  },
+  "geo":{"@type":"GeoCoordinates","latitude":45.7097488,"longitude":-73.9351521},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"16:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"12:00"}
+  ],
+  "areaServed":[
+    {"@type":"City","name":"Montréal"},{"@type":"City","name":"Laval"},
+    {"@type":"City","name":"Mirabel"},{"@type":"City","name":"Longueuil"},
+    {"@type":"City","name":"Terrebonne"},{"@type":"City","name":"Blainville"},
+    {"@type":"City","name":"Saint-Jérôme"},{"@type":"City","name":"Brossard"}
+  ],
+  "knowsLanguage":["fr-CA","en-CA"],
+  "sameAs":[
+    "https://spacia.ca/",
+    "https://www.facebook.com/spaciaconstruction/",
+    "https://www.instagram.com/spacia.construction/",
+    "https://www.linkedin.com/company/spacia-design/",
+    "https://fr.pinterest.com/spaciaconstruction/"
+  ]
+}
+</script>
+
+<script>
+(function(){
+  "use strict";
+  var doux = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var racine = document.documentElement;
+
+  document.getElementById("an").textContent = new Date().getFullYear();
+
+  /* ---------- Bascule de langue ---------- */
+  var boutons = document.querySelectorAll(".langue button");
+  function langue(l){
+    racine.classList.toggle("lang-en", l === "en");
+    racine.setAttribute("lang", l);
+    Array.prototype.forEach.call(boutons, function(b){
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-l") === l));
+    });
+    try{ localStorage.setItem("spacia-langue", l); }catch(e){}
+  }
+  Array.prototype.forEach.call(boutons, function(b){
+    b.addEventListener("click", function(){ langue(b.getAttribute("data-l")); });
+  });
+  /* Le français est servi par défaut et le reste : on ne bascule que sur un
+     choix explicite déjà mémorisé. Une auto-détection via navigator.language
+     ferait indexer la version anglaise par Googlebot (qui explore en en-US)
+     alors que le title, la description et le canonical sont en français. */
+  try{
+    var mem = localStorage.getItem("spacia-langue");
+    if (mem === "en") { langue("en"); }
+  }catch(e){}
+
+  /* ============================================================
+     PIÈGE N°2 — révélation au défilement, avec filet ciblé.
+     Un IntersectionObserver ne se déclenche jamais dans une capture
+     headless ni dans un robot d'aperçu de lien : sans le filet, la
+     page rendrait entièrement vide.
+     ============================================================ */
+  var cibles = document.querySelectorAll(".reveler");
+  if ("IntersectionObserver" in window && !doux.matches){
+    var obs = new IntersectionObserver(function(entrees){
+      entrees.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add("vu"); obs.unobserve(e.target); }
+      });
+    }, { rootMargin:"0px 0px -8% 0px", threshold:0.06 });
+    Array.prototype.forEach.call(cibles, function(el){ obs.observe(el); });
+  } else {
+    Array.prototype.forEach.call(cibles, function(el){ el.classList.add("vu"); });
+  }
+
+  /* Filet CIBLÉ : ne révèle que ce qui est déjà dans le viewport.
+     Au chargement normal en haut de page, rien n'est visible plus bas,
+     donc l'animation reste intacte. Un setTimeout global la détruirait. */
+  function revelerCeQuiEstVisible(){
+    var h = window.innerHeight || document.documentElement.clientHeight;
+    Array.prototype.forEach.call(cibles, function(el){
+      if (el.classList.contains("vu")) return;
+      var r = el.getBoundingClientRect();
+      if (r.top < h && r.bottom > 0) el.classList.add("vu");
+    });
+  }
+  setTimeout(revelerCeQuiEstVisible, 1200);
+  setTimeout(revelerCeQuiEstVisible, 3000);
+
+  /* Parade 3 : impression / export PDF headless */
+  function toutReveler(){
+    Array.prototype.forEach.call(cibles, function(el){ el.classList.add("vu"); });
+  }
+  window.addEventListener("beforeprint", toutReveler);
+  if (window.matchMedia){
+    var mp = window.matchMedia("print");
+    if (mp.addEventListener) mp.addEventListener("change", function(e){ if (e.matches) toutReveler(); });
+  }
+
+  /* ============================================================
+     Parallaxe — transform uniquement, piloté par rAF.
+     Trois profondeurs dans le hero, trois dans la zone médiane.
+     ============================================================ */
+  var heroCouches = [].slice.call(document.querySelectorAll("[data-hero]"));
+  var paraCouches = [].slice.call(document.querySelectorAll("[data-para]"));
+  var enAttente = false;
+  var attenue = 1;
+
+  function calibrer(){
+    /* Amplitude réduite sur petit écran : le mouvement reste minimal en mobile */
+    attenue = window.innerWidth < 760 ? 0.42 : 1;
+  }
+
+  function peindre(){
+    enAttente = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    var vh = window.innerHeight || 800;
+    var i, el;
+
+    /* Hero : progression directe depuis le haut de page */
+    for (i = 0; i < heroCouches.length; i++){
+      el = heroCouches[i];
+      if (y > vh * 1.3) continue;               /* hors champ : on ne calcule plus */
+      el.style.transform = "translate3d(0," +
+        (y * parseFloat(el.getAttribute("data-hero")) * attenue).toFixed(2) + "px,0)";
+      if (el.className.indexOf("hero-contenu") > -1){
+        el.style.opacity = String(Math.max(0, 1 - (y / (vh * 0.75))));
+      }
+    }
+
+    /* Zone médiane : progression centrée sur la section, donc symétrique */
+    for (i = 0; i < paraCouches.length; i++){
+      var c = paraCouches[i];
+      var zone = c.closest ? c.closest("[data-para-zone]") : null;
+      if (!zone) zone = c.parentElement;
+      var r = zone.getBoundingClientRect();
+      if (r.bottom < -140 || r.top > vh + 140) continue;
+      var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+      var d = parseFloat(c.getAttribute("data-para")) * attenue;
+      c.style.transform = "translate3d(0," + (p * d).toFixed(2) + "px,0)";
+    }
+  }
+
+  function planifier(){
+    if (!enAttente){ enAttente = true; requestAnimationFrame(peindre); }
+  }
+
+  if (!doux.matches){
+    calibrer();
+    peindre();
+    window.addEventListener("scroll", planifier, { passive:true });
+    window.addEventListener("resize", function(){ calibrer(); planifier(); }, { passive:true });
+  }
+
+  /* ============================================================
+     PIÈGES N°3 et N°4 — la vidéo de fond.
+     preload="none" + attente de canplay est un interblocage : rien
+     ne charge tant qu'on n'appelle pas load() puis play(). Et la
+     vidéo ne se dévoile qu'au premier « playing », pour qu'un échec
+     de lecture laisse voir le poster net plutôt qu'un cadre noir.
+     ============================================================ */
+  function chargerVideo(){
+    var v = document.getElementById("fond");
+    var poster = document.getElementById("poster");
+    if (!v || doux.matches) return;          /* mouvement réduit : aucun octet téléchargé */
+
+    var co = navigator.connection;
+    if (co && (co.saveData || /(^|-)2g$/.test(co.effectiveType || ""))) return;
+
+    v.src = v.getAttribute("data-src");
+    v.preload = "auto";
+    v.load();
+
+    v.addEventListener("playing", function(){
+      v.classList.add("visible");
+      if (poster) setTimeout(function(){ poster.classList.add("efface"); }, 700);
+    }, { once:true });
+
+    var p = v.play();
+    if (p && p.catch) p.catch(function(){
+      v.classList.remove("visible");
+      if (poster) poster.classList.remove("efface");
+    });
+  }
+
+  if (document.readyState === "complete"){ setTimeout(chargerVideo, 220); }
+  else { window.addEventListener("load", function(){ setTimeout(chargerVideo, 220); }); }
+})();
+</script>
+</body>
+</html>
